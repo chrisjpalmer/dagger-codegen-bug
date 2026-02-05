@@ -66,3 +66,8 @@ dagger/git-repo.RegistryAuth
 dagger/git-repo.GitRepo
 func(defaultBranch string, src invalid type, ssh invalid type) *dagger/git-repo.GitRepo
 ```
+
+**Note: when removing all the module files except for main.go, token positions are constant each time.**
+
+This suggests that it has something to do with `golang.org/x/tools/go/packages` not ordering the package files in the
+same order everytime.
